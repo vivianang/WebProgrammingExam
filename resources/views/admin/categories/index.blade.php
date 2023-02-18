@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('category') }}
+                    {{ __('CATEGORY') }}
                 </h6>
                 <div class="ml-auto">
                     @can('category_create')

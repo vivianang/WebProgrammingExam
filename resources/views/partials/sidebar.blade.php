@@ -10,7 +10,7 @@
 
             <li class="nav-item {{ request()->is('admin/dashboard') || request()->is('admin/dashboard') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.dashboard.index') }}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-home"></i>
                     <span>{{ __('Home') }}</span></a>
             </li>
 
@@ -51,21 +51,12 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item {{ request()->is('admin/customers') || request()->is('admin/customers/*') ? 'active' : '' }}" href="{{ route('admin.customers.index') }}"> <i class="fa fa-briefcase mr-2"></i> {{ __('customer') }}</a>
                         <a class="collapse-item {{ request()->is('admin/bookings') || request()->is('admin/bookings/*') ? 'active' : '' }}" href="{{ route('admin.bookings.index') }}"><i class="fa fa-briefcase mr-2"></i> {{ __('booking') }}</a>
-                        <a class="collapse-item {{ request()->is('admin/find_rooms') || request()->is('admin/find_rooms/*') ? 'active' : '' }}" href="{{ route('admin.find_rooms.index') }}"> <i class="fa fa-user mr-2"></i> {{ __('find room') }}</a>
                     </div>
                 </div>
             </li>
 
-                     <!-- Nav Item  -->
-            <li class="nav-item {{ request()->is('admin/system_calendars') || request()->is('admin/system_calendars') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('admin.system_calendars.index') }}">
-                    <i class="fas fa-fw fa-calendar"></i>
-                    <span>{{ __('Calendar') }}</span></a>
-            </li>
-
             <li class="nav-item {{ request()->is('admin/news') || request()->is('admin/news') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('admin.news.index') }}">
-                    <i class="fas fa-fw fa-calendar"></i>
                     <span>{{ __('News Management') }}</span></a>
             </li>
 

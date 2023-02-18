@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-header py-3 d-flex">
                 <h6 class="m-0 font-weight-bold text-primary">
-                    {{ __('booking') }}
+                    {{ __('BOOKING') }}
                 </h6>
                 <div class="ml-auto">
                     @can('booking_create')
@@ -49,9 +49,12 @@
                                 <td>{{ $booking->total_amount }}</td>
                                 <td>{{ $booking->status }}</td>
                                 <td>
+                                    @can('booking_edit')
                                     <a href="{{ route('admin.bookings.edit', $booking->id) }}" class="btn btn-info">
                                         <i class="fa fa-pencil-alt"></i>
                                     </a>
+                                    @endcan
+                                    @can('booking_delete')
                                     <form onclick="return confirm('are you sure ? ')" class="d-inline" action="{{ route('admin.bookings.destroy', $booking->id) }}" method="POST">
                                         @csrf
                                         @method('delete')
@@ -59,6 +62,7 @@
                                             <i class="fa fa-trash"></i>
                                         </button>
                                     </form>
+                                    @endcan
                                 </td>
                             </tr>
                             @empty

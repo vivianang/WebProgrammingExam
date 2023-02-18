@@ -22,12 +22,9 @@
             </div>
             <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped table-hover datatable datatable-Role" cellspacing="0" width="100%">
+                    <table class="table table-bordered table-striped table-hover" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                 <th width="10">
-
-                                </th>
                                 <th>No</th>
                                 <th>Title</th>
                                 <th>Permission</th>
@@ -37,7 +34,6 @@
                         <tbody>
                             @forelse($roles as $role)
                             <tr data-entry-id="{{ $role->id }}">
-                                <td></td>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $role->title }}</td>
                                 <td>

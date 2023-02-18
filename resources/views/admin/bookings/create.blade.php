@@ -27,7 +27,7 @@
                 <form action="{{ route('admin.bookings.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="customer">{{ __('Customer') }}</label>
+                        <label for="customer">Name</label>
                         <select class="form-control" name="customer_id" id="customer">
                             @foreach($customers as $id => $customer)
                                 <option value="{{ $id }}">{{ $customer }}</option>
